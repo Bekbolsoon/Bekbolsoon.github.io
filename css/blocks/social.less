@@ -1,0 +1,32 @@
+// main: ../style.less
+
+.social {
+  display: flex;
+  margin-bottom: 42px;
+  
+  animation: left-appearance 1s linear .2s;
+}
+.social__link {
+  text-decoration: none;
+  margin-right: 10px;
+
+  transition: transform .2s linear;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  & div {
+    width: 41px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.social__telegram {
+  background-color: #27a1e0;
+}
+.social__vk {
+  background-color: #5181B8;
+}

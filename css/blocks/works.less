@@ -1,0 +1,44 @@
+// main: ../style.less
+
+.works {
+  margin: 2.8rem 0;
+}
+
+.works__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.works__nav-link {
+  font-size: 0.8rem;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  color: fade(@black, 70%);
+  position: relative;
+  transition: color .2s linear;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: @black;
+    position: absolute;
+    bottom: -2px;
+    left: -10%;
+    z-index: 1;
+
+    transition: width .3s linear;
+  }
+
+  &_active {
+    color: @black;
+    &:after {
+      width: 120%;
+    }
+  }
+
+  &:hover {
+    color: @black;
+  }
+}

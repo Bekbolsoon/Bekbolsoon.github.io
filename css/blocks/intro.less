@@ -1,0 +1,133 @@
+// main: ../style.less
+
+.intro {
+	@media @mobile {
+		margin-top: 100px;
+	}
+}
+
+.intro__inner {
+	display: flex;
+	border-bottom: 1px solid fade(@gray, 30%);
+	position: relative;
+	padding-top: 6.6rem;
+	padding-bottom: 8rem;
+	background: url("../images/symbols.png") right bottom no-repeat;
+	
+	animation: appearance 1s linear;
+
+	@media @tablet {
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+		background-size: 400px auto;
+	}
+
+	@media @mobile {
+		background-size: 300px auto;
+	}
+
+	@media @mobile-sm {
+		background: none;
+	}
+}
+
+.intro__content {
+	width: 50%;
+
+	@media @mobile {
+		width: 60%;
+	}
+
+	@media @mobile-sm {
+		width: 100%;
+	}
+}
+
+.intro__subtitle {
+	font-size: 2.13rem;
+	color: @black;
+	font-weight: 200;
+
+	animation: left-appearance 1s linear;
+
+	@media @tablet {
+		font-size: 1.5rem;
+	}
+}
+
+.intro__title {
+	font-size: 3rem;
+	color: @black;
+	font-weight: 700;
+	margin-bottom: 5px;
+
+	animation: left-appearance 1s linear;
+
+	@media @tablet {
+		font-size: 2rem;
+	}
+}
+
+.intro__text {
+	font-size: 1.2rem;
+	color: fade(@black, 70%);
+	margin-bottom: 25px;
+
+	animation: left-appearance 1s linear;
+}
+
+.intro__photo {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	height: 32rem;
+
+	animation: right-appearance 1s linear;
+
+	@media @tablet {
+		height: 25rem;
+	}
+
+	@media @mobile {
+		height: 22rem;
+	}
+
+	@media @mobile-sm {
+		display: none;
+	}
+}
+
+@keyframes left-appearance {
+	0% {
+		margin-left: -50rem;
+		opacity: 0;
+	}
+
+	100% {
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes right-appearance {
+	0% {
+		margin-right: -50rem;
+		opacity: 0;
+	}
+
+	100% {
+		margin-right: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes appearance {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

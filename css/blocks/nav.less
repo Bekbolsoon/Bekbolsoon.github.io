@@ -1,0 +1,77 @@
+// main: ../style.less
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+
+  @media @mobile {
+    display: none;
+
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    position: absolute;
+
+    background: #fff;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+
+    &.show {
+      display: flex;
+    }
+  }
+}
+
+.nav__link {
+  font-size: 0.93rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @black;
+
+  position: relative;
+  margin-left: 2rem;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: @black;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    z-index: 1;
+
+    transition: width .3s linear;
+  }
+
+  &:hover:not(.nav__link_btn) {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  /* Modificators */
+  &_btn {
+    padding: 0.66rem 2rem;
+    border: solid 2px @black;
+    border-radius: 20px;
+    transition: background-color .3s linear, color .3s linear;
+
+    &:hover {
+      background-color: @black;
+      color: @white;
+    }
+  }
+
+  @media @mobile {
+    width: 100%;
+    margin-left: 0;
+    padding: .5rem 1rem;
+  }
+}
