@@ -48,7 +48,7 @@
 	color: @black;
 	font-weight: 200;
 
-	animation: left-appearance 1s linear;
+	animation: leftAppearance 1s linear;
 
 	@media @tablet {
 		font-size: 1.5rem;
@@ -61,7 +61,7 @@
 	font-weight: 700;
 	margin-bottom: 5px;
 
-	animation: left-appearance 1s linear;
+	animation: leftAppearance 1s linear;
 
 	@media @tablet {
 		font-size: 2rem;
@@ -73,7 +73,7 @@
 	color: fade(@black, 70%);
 	margin-bottom: 25px;
 
-	animation: left-appearance 1s linear;
+	animation: leftAppearance 1s linear;
 }
 
 .intro__photo {
@@ -82,8 +82,8 @@
 	right: 0;
 	z-index: 1;
 	height: 32rem;
-
-	animation: right-appearance 1s linear;
+	
+	animation: rightAppearance 1s linear;
 
 	@media @tablet {
 		height: 25rem;
@@ -98,7 +98,14 @@
 	}
 }
 
-@keyframes left-appearance {
+.right-apperance {
+	animation: rightAppearance 1s linear;
+}
+.right-disapperance {
+	animation: rightAppearance 1s linear reverse forwards;
+}
+
+@keyframes leftAppearance {
 	0% {
 		margin-left: -50rem;
 		opacity: 0;
@@ -110,7 +117,7 @@
 	}
 }
 
-@keyframes right-appearance {
+@keyframes rightAppearance {
 	0% {
 		margin-right: -50rem;
 		opacity: 0;

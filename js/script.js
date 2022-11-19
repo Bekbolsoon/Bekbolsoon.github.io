@@ -3,9 +3,11 @@ $(function () {
   let filter = $("[data-filter]");
   filter.on("click", function (event) {
     event.preventDefault();
+
     // Toggle for filter buttons
     $(this).siblings().removeClass('works__nav-link_active');
     $(this).addClass('works__nav-link_active');
+
     // Toggle for works
     let cat = $(this).data('filter');
     if (cat === 'all') {
@@ -23,6 +25,19 @@ $(function () {
     }
   });
 
+  /*===== Animation on scroll =====*/
+  // let $window = $(window);
+  // let object = document.getElementsByClassName('intro__photo')[0];
+  // let objectCoords = object.getBoundingClientRect();
+  // console.log(objectCoords)
+  // $window.on('scroll load', function() {
+  //   console.log($window.scrollTop());
+  //   if ($window.scrollTop() < (objectCoords.bottom + 300)) {
+  //     object.classList.add('right-apperance');
+  //   } else {
+  //     object.classList.remove('right-apperance');
+  //   }
+  // });
 
 
   /* Modal

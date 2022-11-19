@@ -320,7 +320,7 @@ p {
   font-size: 2.13rem;
   color: #2b2a2c;
   font-weight: 200;
-  animation: left-appearance 1s linear;
+  animation: leftAppearance 1s linear;
 }
 @media (max-width: 991px) {
   .intro__subtitle {
@@ -332,7 +332,7 @@ p {
   color: #2b2a2c;
   font-weight: 700;
   margin-bottom: 5px;
-  animation: left-appearance 1s linear;
+  animation: leftAppearance 1s linear;
 }
 @media (max-width: 991px) {
   .intro__title {
@@ -343,7 +343,7 @@ p {
   font-size: 1.2rem;
   color: rgba(43, 42, 44, 0.7);
   margin-bottom: 25px;
-  animation: left-appearance 1s linear;
+  animation: leftAppearance 1s linear;
 }
 .intro__photo {
   position: absolute;
@@ -351,7 +351,7 @@ p {
   right: 0;
   z-index: 1;
   height: 32rem;
-  animation: right-appearance 1s linear;
+  animation: rightAppearance 1s linear;
 }
 @media (max-width: 991px) {
   .intro__photo {
@@ -368,7 +368,13 @@ p {
     display: none;
   }
 }
-@keyframes left-appearance {
+.right-apperance {
+  animation: rightAppearance 1s linear;
+}
+.right-disapperance {
+  animation: rightAppearance 1s linear reverse forwards;
+}
+@keyframes leftAppearance {
   0% {
     margin-left: -50rem;
     opacity: 0;
@@ -378,7 +384,7 @@ p {
     opacity: 1;
   }
 }
-@keyframes right-appearance {
+@keyframes rightAppearance {
   0% {
     margin-right: -50rem;
     opacity: 0;
@@ -399,7 +405,7 @@ p {
 .social {
   display: flex;
   margin-bottom: 42px;
-  animation: left-appearance 1s linear 0.2s;
+  animation: leftAppearance 1s linear 0.2s;
 }
 .social__link {
   text-decoration: none;
@@ -440,7 +446,7 @@ p {
   line-height: 1.1;
   text-align: center;
   transition: background-color 0.3s linear, color 0.3s linear, box-shadow 0.3s linear, border-color 0.3s linear;
-  animation: left-appearance 1s linear 0.4s;
+  animation: leftAppearance 1s linear 0.4s;
   /* Modifacotors */
 }
 .btn:focus {
@@ -532,7 +538,8 @@ p {
   flex-basis: 33.3333%;
   padding: 1rem;
   overflow: hidden;
-  transition: flex-basis 1s linear, padding 1s linear;
+  opacity: 1;
+  transition: opacity 1s linear;
 }
 @media (max-width: 767px) {
   .portfolio-col {
@@ -547,7 +554,21 @@ p {
 .unselected-portfolio {
   flex-basis: 0%;
   padding: 0;
-  transition: flex-basis 1s linear, padding 1s linear;
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+.top-appearance {
+  animation: topAppearance 1s linear;
+}
+@keyframes topAppearance {
+  0% {
+    margin-top: -50rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
 }
 .work {
   overflow: hidden;

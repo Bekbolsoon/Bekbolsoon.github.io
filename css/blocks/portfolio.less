@@ -10,7 +10,8 @@
 	flex-basis: 33.3333%;
 	padding: 1rem;
 	overflow: hidden;
-	transition: flex-basis 1s linear, padding 1s linear;
+	opacity: 1;
+	transition: opacity 1s linear;
 
 	@media @mobile {
 		flex-basis: 50%;
@@ -24,5 +25,22 @@
 .unselected-portfolio {
 	flex-basis: 0%;
   padding: 0;
-	transition: flex-basis 1s linear, padding 1s linear;
+	opacity: 0;
+	transition: opacity 1s linear;
+}
+
+.top-appearance {
+	animation: topAppearance 1s linear;
+}
+
+@keyframes topAppearance {
+	0% {
+		margin-top: -50rem;
+		opacity: 0;
+	}
+
+	100% {
+		margin-top: 0;
+		opacity: 1;
+	}
 }
