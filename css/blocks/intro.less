@@ -14,8 +14,6 @@
 	padding-bottom: 8rem;
 	background: url("../../images/intro/bg-intro.png") right bottom no-repeat;
 
-	animation: appearance 1s linear;
-
 	@media @tablet {
 		padding-top: 3rem;
 		padding-bottom: 4rem;
@@ -48,7 +46,6 @@
 	color: @black;
 	font-weight: 200;
 
-	// animation: leftAppearance 1s linear;
 	transform: translate(0px, 120%);
 	opacity: 0;
 	transition: all 0.8s ease 0s;
@@ -69,7 +66,6 @@
 	font-weight: 700;
 	margin-bottom: 5px;
 
-	// animation: leftAppearance 1s linear;
 	transform: translate(0px, 120%);
 	opacity: 0;
 	transition: all 0.8s ease 0s;
@@ -90,7 +86,6 @@
 	color: fade(@black, 70%);
 	margin-bottom: 25px;
 
-	// animation: leftAppearance 1s linear;
 	transform: translate(0px, 120%);
 	opacity: 0;
 	transition: all 0.8s ease 0s;
@@ -108,8 +103,9 @@
 	right: 0;
 	z-index: 1;
 	height: 32rem;
-
-	// animation: rightAppearance 1s linear;
+	
+	transform: scale(0);
+	transition: all 0.8s ease 0s;
 
 	@media @tablet {
 		height: 25rem;
@@ -124,44 +120,6 @@
 	}
 }
 
-// .right-apperance {
-// 	animation: rightAppearance 1s linear;
-// }
-
-// .right-disapperance {
-// 	animation: rightAppearance 1s linear reverse forwards;
-// }
-
-// @keyframes leftAppearance {
-// 	0% {
-// 		margin-left: -50rem;
-// 		opacity: 0;
-// 	}
-
-// 	100% {
-// 		margin-left: 0;
-// 		opacity: 1;
-// 	}
-// }
-
-// @keyframes rightAppearance {
-// 	0% {
-// 		margin-right: -50rem;
-// 		opacity: 0;
-// 	}
-
-// 	100% {
-// 		margin-right: 0;
-// 		opacity: 1;
-// 	}
-// }
-
-// @keyframes appearance {
-// 	0% {
-// 		opacity: 0;
-// 	}
-
-// 	100% {
-// 		opacity: 1;
-// 	}
-// }
+.intro__photo._active {
+	transform: scale(1);
+}

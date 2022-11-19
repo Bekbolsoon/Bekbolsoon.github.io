@@ -284,7 +284,6 @@ p {
   padding-top: 6.6rem;
   padding-bottom: 8rem;
   background: url("../../images/intro/bg-intro.png") right bottom no-repeat;
-  animation: appearance 1s linear;
 }
 @media (max-width: 991px) {
   .intro__inner {
@@ -371,6 +370,8 @@ p {
   right: 0;
   z-index: 1;
   height: 32rem;
+  transform: scale(0);
+  transition: all 0.8s ease 0s;
 }
 @media (max-width: 991px) {
   .intro__photo {
@@ -386,6 +387,9 @@ p {
   .intro__photo {
     display: none;
   }
+}
+.intro__photo._active {
+  transform: scale(1);
 }
 .social {
   display: flex;
@@ -431,7 +435,6 @@ p {
   line-height: 1.1;
   text-align: center;
   transition: background-color 0.3s linear, color 0.3s linear, box-shadow 0.3s linear, border-color 0.3s linear;
-  animation: leftAppearance 1s linear 0.4s;
   /* Modifacotors */
 }
 .btn:focus {
@@ -524,7 +527,7 @@ p {
   padding: 1rem;
   overflow: hidden;
   opacity: 1;
-  transition: opacity 1s linear;
+  transition: opacity 2s linear;
 }
 @media (max-width: 767px) {
   .portfolio-col {
@@ -540,7 +543,7 @@ p {
   flex-basis: 0%;
   padding: 0;
   opacity: 0;
-  transition: opacity 1s linear;
+  transition: opacity 2s linear;
 }
 .top-appearance {
   animation: topAppearance 1s linear;
@@ -650,6 +653,8 @@ p {
 }
 .about__photo {
   position: relative;
+  transform: scale(0);
+  transition: all 0.8s ease 0s;
 }
 .about__photo img {
   display: block;
@@ -691,6 +696,9 @@ p {
     left: 0;
   }
 }
+.about__photo._active {
+  transform: scale(1);
+}
 .about__content {
   padding-left: 3.2rem;
   margin-top: 2rem;
@@ -729,6 +737,7 @@ p {
   color: rgba(43, 42, 44, 0.15);
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 @media (max-width: 1199px) {
   .about__bigtitle {
@@ -747,10 +756,13 @@ p {
 }
 .about__text {
   font-size: 0.8rem;
-  margin-bottom: 2.8rem;
   line-height: 2;
   color: #6a696b;
   font-weight: 300;
+  overflow: hidden;
+}
+.about__text:last-of-type {
+  margin-bottom: 2rem;
 }
 .footer {
   padding: 1rem 0;
@@ -1133,6 +1145,33 @@ p {
 .mb-0 {
   margin-bottom: 0;
 }
-.hide {
-  display: none;
+._anim-show {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+._anim-show._active,
+._active ._anim-show {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+._anim-bottom {
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+._anim-bottom._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.8s;
+}
+._anim-left {
+  transform: translate(-50%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+._anim-left._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.8s;
 }

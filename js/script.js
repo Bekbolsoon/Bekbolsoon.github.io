@@ -26,18 +26,6 @@ $(function () {
   });
 
   /*===== Animation on scroll =====*/
-  // let $window = $(window);
-  // let object = document.getElementsByClassName('intro__photo')[0];
-  // let objectCoords = object.getBoundingClientRect();
-  // console.log(objectCoords)
-  // $window.on('scroll load', function() {
-  //   console.log($window.scrollTop());
-  //   if ($window.scrollTop() < (objectCoords.bottom + 300)) {
-  //     object.classList.add('right-apperance');
-  //   } else {
-  //     object.classList.remove('right-apperance');
-  //   }
-  // });
   const animItems = document.querySelectorAll('._anim-items');
 
   if(animItems.length > 0) {
