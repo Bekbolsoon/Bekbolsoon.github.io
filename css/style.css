@@ -764,6 +764,86 @@ p {
 .about__text:last-of-type {
   margin-bottom: 2rem;
 }
+.contact {
+  padding: 5rem 0;
+}
+.contact__title {
+  font-size: 3rem;
+  color: #2b2a2c;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1199px) {
+  .contact__title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact__title {
+    font-size: 2rem;
+  }
+}
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+}
+.contact__btn {
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  min-width: 15rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1.8em;
+  color: #fff;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.06rem;
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.contact__btn + .contact__btn {
+  margin-top: 1rem;
+}
+.contact__btn span {
+  flex-basis: 100%;
+}
+.contact__btn::after,
+.contact__btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #0b42a5;
+  z-index: -1;
+  transform: translate3D(-110%, 0, 0);
+  transition: all 0.5s;
+  border-radius: 1.8em;
+}
+.contact__btn_telegram::after {
+  background: #269fdd;
+}
+.contact__btnvk::after {
+  background: #0071f2;
+}
+.contact__btn::before {
+  background: #000;
+  z-index: -2;
+  transform: translate3D(0, 0, 0);
+}
+.contact__btn:hover {
+  color: white;
+}
+.contact__btn:hover::after {
+  transform: translate3D(0, 0, 0);
+}
 .footer {
   padding: 1rem 0;
   background-color: #2b2a2c;
@@ -796,6 +876,13 @@ p {
   text-decoration: none;
   text-align: center;
   line-height: 4rem;
+  transition: all 0.3s linear;
+}
+.footer__social-link:hover {
+  background-color: #fff;
+}
+.footer__social-link:hover svg path {
+  fill: #2b2a2c;
 }
 .footer__nav {
   display: flex;
@@ -810,14 +897,15 @@ p {
 .footer__nav-link:hover {
   text-decoration: underline;
 }
-.footer__nav-link--btn {
+.footer__nav-link_btn {
   padding: 0.5rem 1.4rem;
   border-radius: 20px;
   border: 1px solid #fff;
+  font-weight: 600;
   line-height: 1.1;
   transition: 0.3s linear;
 }
-.footer__nav-link--btn:hover {
+.footer__nav-link_btn:hover {
   text-decoration: none;
   background-color: #fff;
   border-color: #fff;
@@ -1050,18 +1138,18 @@ p {
   background-color: #6a696b;
   transition: width 0.2s linear;
 }
-.contact {
+.contact-hire {
   display: flex;
 }
-.contact__left {
-  width: 47%;
+.contact-hire__left {
+  width: 50%;
   padding: 2rem;
 }
-.contact__right {
+.contact-hire__right {
   width: 53%;
   background: #2b2a2c url(https://placehold.co/480x700) no-repeat center;
 }
-.contact__info {
+.contact-hire__info {
   margin: 2rem 0 3rem;
   padding: 0;
   list-style: none;
@@ -1069,15 +1157,15 @@ p {
   color: #2b2a2c;
   font-weight: 300;
 }
-.contact__info-item {
+.contact-hire__info-item {
   display: flex;
   align-items: center;
   margin-bottom: 0.75rem;
 }
-.contact__info-item:last-child {
+.contact-hire__info-item:last-child {
   margin-bottom: 0;
 }
-.contact__info-icon {
+.contact-hire__info-icon {
   width: 20px;
   margin-right: 0.75rem;
 }

@@ -1,35 +1,93 @@
 // main: ../style.less
 
-.contact{
-    display: flex;
+.contact {
+  padding: 5rem 0;
 }
-.contact__left{
-    width: 47%;
-    padding: 2rem
+
+.contact__title {
+  font-size: 3rem;
+  color: @black;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @media @notebook {
+    font-size: 2.5rem;
+  }
+
+  @media @mobile {
+    font-size: 2rem;
+  }
 }
-.contact__right{
-    width: 53%;
-    background: @black url(https://placehold.co/480x700) no-repeat center;
+
+.contact__inner {
+  display: flex;
+  flex-direction: column;
 }
-.contact__info{
-    margin: 2rem 0 3rem;
-    padding: 0;
-    list-style: none;
-    
-    font-size: .94rem;
-    color: @black;
-    font-weight: 300;
-}
-.contact__info-item{
-    display: flex;
-    align-items: center;
-    margin-bottom: .75rem;
-    
-    &:last-child{
-        margin-bottom: 0;
-    }
-}
-.contact__info-icon{
-    width: 20px;
-    margin-right: .75rem;
+
+.contact__btn {
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  min-width: 15rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1.8em;
+
+  color: @white;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.06rem;
+  line-height: 1.1;
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  &+& {
+    margin-top: 1rem;
+  }
+
+  & span {
+    flex-basis: 100%;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #0b42a5;
+    z-index: -1;
+    transform: translate3D(-110%, 0, 0);
+    transition: all .5s;
+    border-radius: 1.8em;
+  }
+
+  &_telegram::after {
+    background: #269fdd;
+  }
+
+  &vk::after {
+    background: #0071f2;
+  }
+
+  &::before {
+    background: #000;
+    z-index: -2;
+    transform: translate3D(0, 0, 0);
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  &:hover::after {
+    transform: translate3D(0, 0, 0);
+  }
 }
