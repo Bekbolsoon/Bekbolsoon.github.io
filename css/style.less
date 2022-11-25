@@ -1,56 +1,69 @@
-
 @import "vars";
 
-html{
-    font-size: 15px;
+html {
+	font-size: 15px;
+	scroll-behavior: smooth;
 }
-body{
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: @black;
-    overflow-x: hidden;
-    
-    &.no-scroll{
-        overflow: hidden;
-    }
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem;
+	color: @black;
+	overflow-x: hidden;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
-h1, h2, h3, h4, h5, h6{
-    margin: 0;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
 }
-p{
-    margin: 0 0 1rem;
+
+p {
+	margin: 0 0 1rem;
 }
+
 *,
 *:before,
-*:after{
-    box-sizing: border-box;
+*:after {
+	box-sizing: border-box;
 }
 
 /* Vendor */
 @import "vendor/slick.less";
 
-/* Blocks */
-@import "blocks/container.less";
-@import "blocks/header.less";
-@import "blocks/user.less";
-@import "blocks/nav.less";
-@import "blocks/intro.less";
-@import "blocks/social.less";
-@import "blocks/btn.less";
-@import "blocks/works.less";
-@import "blocks/portfolio.less";
-@import "blocks/work.less";
-@import "blocks/about.less";
-@import "blocks/contact.less";
-@import "blocks/footer.less";
-@import "blocks/modal.less";
-@import "blocks/modal-work.less";
+/* Common styles */
+@import "blocks/_common/container.less";
+@import "blocks/_common/btn.less";
+
+/* Sections */
+@import "blocks/header/header.less";
+@import "blocks/header/user.less";
+@import "blocks/header/nav.less";
+@import "blocks/header/burger.less";
+@import "blocks/intro/intro.less";
+@import "blocks/intro/social.less";
+@import "blocks/works/works.less";
+@import "blocks/works/portfolio.less";
+@import "blocks/about/about.less";
+@import "blocks/contact/contact.less";
+@import "blocks/footer/footer.less";
+
+/* Modal windows */
+@import "blocks/modals/modal.less";
+@import "blocks/modals/hire-me/hire-me.less";
+@import "blocks/modals/project/project.less";
+
 @import "blocks/timeline.less";
 @import "blocks/progress-bar.less";
-@import "blocks/contact-hire.less";
 @import "blocks/form.less";
-@import "blocks/burger.less";
 
 /* Helpers */
 @import "helpers.less";

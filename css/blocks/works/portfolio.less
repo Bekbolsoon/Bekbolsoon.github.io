@@ -1,6 +1,35 @@
-// main: ../style.less
+// main: ../../style.less
 
-.work {
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -1rem 2.8rem;
+}
+
+.portfolio-col {
+	flex-basis: 33.3333%;
+	padding: 1rem;
+	overflow: hidden;
+	opacity: 1;
+	transition: opacity 1s linear;
+
+	@media @mobile {
+		flex-basis: 50%;
+	}
+
+	@media @mobile-sm {
+		flex-basis: 100%;
+	}
+}
+
+.unselected-portfolio {
+	flex-basis: 0%;
+  padding: 0;
+	opacity: 0;
+	transition: opacity 1s linear;
+}
+
+.portfolio__item {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 0 4px fade(#000, 25%);
@@ -20,7 +49,7 @@
   }
 }
 
-.work__image {
+.portfolio__image {
   display: block;
   max-width: 100%;
   height: 20rem;
@@ -54,19 +83,19 @@
   }
 }
 
-.work__content {
+.portfolio__content {
   padding: 1rem 0.8rem;
   border-top: 1px solid fade(#000, 25%);
 }
 
-.work__cat {
+.portfolio__cat {
   font-size: 0.8rem;
   text-transform: uppercase;
   color: @black;
   margin-bottom: 0.5rem;
 }
 
-.work__title {
+.portfolio__title {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;

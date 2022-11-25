@@ -1,0 +1,63 @@
+// main: ../../../style.less
+
+.hire-me {
+	display: flex;
+}
+
+.hire-me__content {
+	width: 50%;
+	padding: 2rem
+}
+
+.hire-me__image {
+	width: 50%;
+  background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../../images/modal/hire_me/hire_me.jpg);
+}
+
+.hire-me__title {
+	margin-bottom: 0;
+}
+
+.hire-me__contacts {
+	margin: 2rem 0 3rem;
+	padding: 0;
+	list-style: none;
+}
+
+.hire-me__contacts-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	font-size: 0.85rem;
+	color: @black;
+	font-weight: 500;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	& a {
+		text-decoration: none;
+		color: @black;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			text-decoration: underline;
+		}
+		& svg {
+			margin-right: 0.75rem;
+		}
+	}
+}
+
+.hire-me__contacts-icon {
+	width: 20px;
+	margin-right: .75rem;
+}
+
+.hire-me__btn {
+	text-align: right;
+}

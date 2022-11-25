@@ -25,9 +25,10 @@ $(function () {
     }
   });
 
+
+
   /*===== Animation on scroll =====*/
   const animItems = document.querySelectorAll('._anim-items');
-
   if(animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
 
@@ -66,9 +67,9 @@ $(function () {
   }
 
 
+
   /* Modal
   ==================*/
-
   const modalCall = $("[data-modal]");
   const modalClose = $("[data-close]");
 
@@ -126,33 +127,22 @@ $(function () {
 
 
 
+  /*===== Settings of slider =====*/
   const worksSlider = $('[data-slider="slick"]');
-  /* Slider: https://kenwheeler.github.io/slick/
-  =================*/
 
   worksSlider.slick({
+    dots: true,
     infinite: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    pauseOnFocus: false,
+    pauseOnHover: true,
+    pauseOnDotsHover: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    arrows: false,
-    dots: true
-  });
-
-  $('.slickPrev').on("click", function (event) {
-    event.preventDefault();
-
-    let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
-
-    currentSlider.slick("slickPrev");
-  });
-
-  $('.slickNext').on("click", function (event) {
-    event.preventDefault();
-
-    let currentSlider = $(this).parents('.modal').find('[data-slider="slick"]');
-
-    currentSlider.slick("slickNext");
+    cssEase: 'linaer',
+    arrows: false
   });
 
 
@@ -168,7 +158,4 @@ $(function () {
 
     nav.toggleClass("show");
   });
-
-
-
 });

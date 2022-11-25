@@ -1,0 +1,91 @@
+// main: ../../../style.less
+
+.project {
+	display: flex;
+	max-height: 26rem;
+}
+
+.project__preview {
+	width: 60%;
+	position: relative;
+	overflow: hidden;
+}
+
+.project__photo {
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.project__content {
+	width: 40%;
+	padding: 3rem 1.5rem 1rem 1rem;
+	position: relative;
+}
+
+.project__header {
+	margin-bottom: 2.2rem;
+}
+
+.project__title {
+	margin-bottom: 0.2rem;
+	font-size: 2rem;
+	color: @black;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.project__info {
+	font-size: 1.2rem;
+	color: @gray;
+	text-transform: uppercase;
+
+	span {
+		margin: 0 1rem;
+	}
+}
+
+.project__client {
+	margin-bottom: 1rem;
+}
+
+.project__client-title {
+	margin-bottom: 0.2rem;
+	font-size: 1.06rem;
+	color: @black;
+	font-weight: 700;
+}
+
+.project__client-company {
+	font-size: 0.94rem;
+	color: @gray;
+	font-style: italic;
+}
+
+.project__text {
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	color: @gray;
+	line-height: 2;
+	font-weight: 300;
+}
+
+.project__link {
+	text-align: center;
+	font-size: 1rem;
+	font-style: italic;
+	margin: 0;
+	margin-bottom: 0.2rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	& a {
+		color: #000;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+}
