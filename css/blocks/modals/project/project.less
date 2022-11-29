@@ -3,12 +3,22 @@
 .project {
 	display: flex;
 	max-height: 26rem;
+
+	@media @tablet-md {
+		flex-direction: column-reverse;
+		max-height: none;
+	}
 }
 
 .project__preview {
 	width: 60%;
 	position: relative;
 	overflow: hidden;
+
+	@media @tablet-md {
+		min-width: 100%;
+		width: 100%;
+	}
 }
 
 .project__photo {
@@ -23,6 +33,10 @@
 	width: 40%;
 	padding: 3rem 1.5rem 1rem 1rem;
 	position: relative;
+
+	@media @tablet-md {
+		width: 100%;
+	}
 }
 
 .project__header {

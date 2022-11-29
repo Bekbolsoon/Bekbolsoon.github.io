@@ -2,11 +2,19 @@
 
 .hire-me {
 	display: flex;
+
+	@media @mobile-md {
+		flex-direction: column-reverse;
+	}
 }
 
 .hire-me__content {
 	width: 50%;
-	padding: 2rem
+	padding: 2rem;
+	
+	@media @mobile-md {
+		width: 100%;
+	}
 }
 
 .hire-me__image {
@@ -14,10 +22,20 @@
   background-size: cover;
 	background-repeat: no-repeat;
 	background-image: url(../../images/modal/hire_me/hire_me.jpg);
+
+	@media @mobile-md {
+		width: 100%;
+		height: 20rem;
+		background-position: center center;
+	}
 }
 
 .hire-me__title {
 	margin-bottom: 0;
+
+	@media @mobile-sm {
+		font-size: 2.5rem;
+	}
 }
 
 .hire-me__contacts {

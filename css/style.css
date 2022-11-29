@@ -145,7 +145,7 @@ p {
   padding: 0;
   background-color: #000;
   border: 1px solid #000;
-  background: transparent;
+  background: #fff;
   border-radius: 50%;
   cursor: pointer;
   font-size: 0;
@@ -1041,9 +1041,19 @@ p {
 .hire-me {
   display: flex;
 }
+@media (max-width: 660px) {
+  .hire-me {
+    flex-direction: column-reverse;
+  }
+}
 .hire-me__content {
   width: 50%;
   padding: 2rem;
+}
+@media (max-width: 660px) {
+  .hire-me__content {
+    width: 100%;
+  }
 }
 .hire-me__image {
   width: 50%;
@@ -1051,8 +1061,20 @@ p {
   background-repeat: no-repeat;
   background-image: url(../../images/modal/hire_me/hire_me.jpg);
 }
+@media (max-width: 660px) {
+  .hire-me__image {
+    width: 100%;
+    height: 20rem;
+    background-position: center center;
+  }
+}
 .hire-me__title {
   margin-bottom: 0;
+}
+@media (max-width: 565px) {
+  .hire-me__title {
+    font-size: 2.5rem;
+  }
 }
 .hire-me__contacts {
   margin: 2rem 0 3rem;
@@ -1093,10 +1115,22 @@ p {
   display: flex;
   max-height: 26rem;
 }
+@media (max-width: 880px) {
+  .project {
+    flex-direction: column-reverse;
+    max-height: none;
+  }
+}
 .project__preview {
   width: 60%;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 880px) {
+  .project__preview {
+    min-width: 100%;
+    width: 100%;
+  }
 }
 .project__photo img {
   width: 100%;
@@ -1107,6 +1141,11 @@ p {
   width: 40%;
   padding: 3rem 1.5rem 1rem 1rem;
   position: relative;
+}
+@media (max-width: 880px) {
+  .project__content {
+    width: 100%;
+  }
 }
 .project__header {
   margin-bottom: 2.2rem;
