@@ -1,0 +1,52 @@
+// main: ../style.less
+
+.first-screen {
+  background: linear-gradient(99.43deg, #EEFBFF 11.58%, #F2FDDC 56.95%, #F5FFC0 93.46%);
+  position: relative;
+}
+.first-screen__title {
+  text-align: center;
+  padding-bottom: 23rem;
+  position: relative;
+}
+.first-screen__text {
+  position: relative;
+  z-index: 1;
+  
+  transform: translate(0px, 200%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+  @media @notebook-lg {
+    & svg {
+      max-width: 100%;
+    }
+  }
+}
+.first-screen__text._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0s;
+}
+.first-screen__logo {
+  position: absolute;
+  top: -16rem;
+  left: 0;
+  right: 0;
+
+  @media @notebook-lg {
+      & svg {
+        width: 35%;
+      }
+  }
+}
+.first-screen__bg-detail-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.first-screen__bg-detail-2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,56 @@
+// main: ../style.less
+
+.map {
+  position: relative;
+}
+.map__bg {
+  & img {
+    width: 100%;
+
+    @media @tablet {
+      width: 120%;
+    }
+    @media @mobile-sm {
+      width: 200%;
+      margin-left: -30rem;
+    }
+  }
+}
+.map__inner {
+  position: absolute;
+  top: 14.2rem;
+
+  @media @tablet {
+    position: relative;
+    top: 0;
+  }
+}
+.map__info {
+  max-width: 57rem;
+  padding: 7.5rem 3.2rem 5.7rem 7.5rem;
+  background: @white;
+  position: relative;
+  z-index: 1;
+}
+.map__welcome {
+  font-family: 'MullerRegular';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.9;
+  color: #4A4A4A;
+}
+.map__address {
+  font-family: 'MullerRegular';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.75;
+  color: #4E4E4E;
+  margin-bottom: 2rem;
+}
+.map__link {
+  font-family: 'MullerRegular';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.62;
+  color: #C3E859;
+}

@@ -1,0 +1,78 @@
+// main: ../style.less
+
+.human {
+    margin-bottom: 15rem;
+
+    @media @mobile {
+        margin-bottom: 7rem;
+    }
+}
+.human__title {
+    max-width: 60rem;
+    margin-bottom: 1.5rem;
+
+    @media @notebook-lg {
+        max-width: none;
+    }
+    @media @mobile {
+        width: 70%;
+    }
+}
+.human__imgTitle {
+    margin-bottom: 2rem;
+
+    & img {
+        &:last-child {
+            display: none;
+        }
+
+        @media @notebook {
+            width: 100%;
+        }
+        @media @mobile {
+            &:first-child {
+                display: none;
+            }
+            &:last-child {
+                display: block;
+                width: 40%;
+            }
+        }
+        @media @mobile-sm {
+            &:last-child {
+                width: 65%;
+            }
+        }
+    }
+}
+.human__subtitle {
+    font-family: 'MullerBold';
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.33;
+    color: #81AEE5;
+    max-width: 67.2rem;
+    margin-bottom: 13.7rem;
+    
+    @media @mobile {
+        margin-bottom: 7rem;        
+        font-size: 1.6rem;
+        line-height: 1.88;
+    }
+}
+.human__image {
+    & img {
+        width: 100%;
+    
+        @media @notebook-lg {
+            width: 150%;
+            margin-left: -30rem;
+        }
+        @media @mobile {
+            margin-left: -20rem;
+        }
+        @media @mobile-sm {
+            margin-left: -15rem;
+        }
+    }
+}

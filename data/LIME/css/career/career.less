@@ -1,0 +1,90 @@
+// main: ../style.less
+
+.career {
+  margin-bottom: 48.5rem;
+
+  @media @mobile {
+    margin-bottom: 4.5rem;
+  }
+}
+.career__inner {
+  position: relative;
+
+  @media @notebook {
+    text-align: center;
+  }
+}
+.career__title {
+  margin-bottom: 4.3rem;
+  z-index: 1;
+  position: relative;
+
+  @media @mobile {
+    text-align: left;
+  }
+}
+.career_imgTitle {
+  margin-bottom: 2rem;
+  text-align: right;
+  z-index: 1;
+  position: relative;
+
+  & img {
+    &:last-child {
+      display: none;
+    }
+    @media @mobile {
+        &:first-child {
+            display: none;
+        }
+        &:last-child {
+            display: block;
+        }
+        width: 38rem;
+    }
+    @media @mobile-sm {
+      width: 80%;
+    }
+  }
+
+  @media @notebook {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+.career__bg-1 {
+  position: absolute;
+  top: 4rem;
+  left: -8rem;
+  width: 67rem;
+
+  & img {
+    width: 100%;
+  }
+
+  @media @notebook {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+.career__bg-2 {
+  position: absolute;
+  width: 52rem;
+  right: -8rem;
+  top: -12rem;
+
+  & img {
+    width: 100%;
+  }
+
+  @media @notebook {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

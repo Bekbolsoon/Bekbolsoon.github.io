@@ -1,0 +1,37 @@
+// main: ../style.less
+
+.info {
+    margin-top: 7rem;
+    margin-bottom: 18rem;
+    
+    @media @notebook-lg {
+        margin-bottom: 12rem;
+    }
+    @media @mobile {
+        margin-bottom: 8.5rem;
+    }
+}
+.info__location {
+    & P {
+        font-size: 1.6rem;
+        color: #8D8D8D;
+        font-family: 'MullerRegular';
+        font-weight: 400;
+    }
+    & p span {
+        color: #81AEE5;
+        border-bottom: 1px solid #81AEE5;
+    }
+
+    @media @mobile {
+        display: none;
+    }
+}
+.info__burger {
+    display: none;
+
+    @media @mobile {
+        display: block;
+        text-align: right;
+    }
+}

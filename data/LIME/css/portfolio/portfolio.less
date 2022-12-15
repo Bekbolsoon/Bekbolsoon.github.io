@@ -1,0 +1,67 @@
+// main: ../style.less
+
+.portfolio {
+  margin-bottom: 11rem;
+}
+.portfolio__title {
+  margin-bottom: 1rem;
+}
+.porfilio__filter {
+  font-family: 'MullerRegular';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.62;
+  color: #7C7C7C;
+  margin-bottom: 1rem;
+}
+.portfolio__buttons {
+  max-width: 65%;
+  margin-bottom: 6rem;
+
+  @media @mobile {
+    max-width: none;
+  }
+}
+.potfolio__btn {
+  font-family: 'MullerRegular';
+  font-weight: 400;
+  display: inline-block;
+  font-size: 2.2rem;
+  letter-spacing: 0.04em;
+  color: #000000;
+  text-decoration: none;
+  padding: 1.6rem 1.7rem 1.3rem 2.7rem;
+  border: 1px solid #D8F664;
+  border-radius: 3rem;
+  margin-right: 1.2rem;
+  margin-bottom: 1rem;
+}
+.potfolio__btn.is-active {
+  background: #D8F664;
+}
+.project-portfolio {
+  margin-bottom: 3.5rem;
+  max-width: 48%;
+
+  &:nth-child(n+31) {
+    margin-bottom: 0;
+  }
+
+  @media @notebook {
+    &:nth-child(31) {
+      margin-bottom: 3.5rem;
+    }
+  }
+  @media @mobile {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &:nth-child(31) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+.hide {
+  display: none;
+}

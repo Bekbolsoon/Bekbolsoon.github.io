@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'MullerRegular';
+  src: url('MullerRegular/MullerRegular.woff2') format('woff2'),
+       url('MullerRegular/MullerRegular.woff') format('woff'),
+       url('MullerRegular/MullerRegular.ttf') format('truetype'),
+       url('MullerRegular/MullerRegular.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerRegularItalic';
+  src: url('MullerRegularItalic/MullerRegularItalic.woff2') format('woff2'),
+       url('MullerRegularItalic/MullerRegularItalic.woff') format('woff'),
+       url('MullerRegularItalic/MullerRegularItalic.ttf') format('truetype'),
+       url('MullerRegularItalic/MullerRegularItalic.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerBold';
+  src: url('MullerBold/MullerBold.woff2') format('woff2'),
+       url('MullerBold/MullerBold.woff') format('woff'),
+       url('MullerBold/MullerBold.ttf') format('truetype'),
+       url('MullerBold/MullerBold.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerBoldItalic';
+  src: url('MullerBoldItalic/MullerBoldItalic.woff2') format('woff2'),
+       url('MullerBoldItalic/MullerBoldItalic.woff') format('woff'),
+       url('MullerBoldItalic/MullerBoldItalic.ttf') format('truetype'),
+       url('MullerBoldItalic/MullerBoldItalic.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerExtraBoldItalic';
+  src: url('MullerExtraBoldItalic/MullerExtraBoldItalic.woff2') format('woff2'),
+       url('MullerExtraBoldItalic/MullerExtraBoldItalic.woff') format('woff'),
+       url('MullerExtraBoldItalic/MullerExtraBoldItalic.ttf') format('truetype'),
+       url('MullerExtraBoldItalic/MullerExtraBoldItalic.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerLight';
+  src: url('MullerLight/MullerLight.woff2') format('woff2'),
+       url('MullerLight/MullerLight.woff') format('woff'),
+       url('MullerLight/MullerLight.ttf') format('truetype'),
+       url('MullerLight/MullerLight.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerUltraLight';
+  src: url('MullerUltraLight/MullerUltraLight.woff2') format('woff2'),
+       url('MullerUltraLight/MullerUltraLight.woff') format('woff'),
+       url('MullerUltraLight/MullerUltraLight.ttf') format('truetype'),
+       url('MullerUltraLight/MullerUltraLight.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerThin';
+  src: url('MullerThin/MullerThin.woff2') format('woff2'),
+       url('MullerThin/MullerThin.woff') format('woff'),
+       url('MullerThin/MullerThin.ttf') format('truetype'),
+       url('MullerThin/MullerThin.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

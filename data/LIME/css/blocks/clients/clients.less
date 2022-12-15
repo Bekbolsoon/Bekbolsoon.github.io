@@ -1,0 +1,104 @@
+// main: ../../style.less
+
+.clients {
+    background: url(../images/clients/bg-clients.png);
+    overflow: hidden;
+}
+.clients__inner {
+    padding-top: 13.4rem;
+    padding-bottom: 16.2rem;
+    
+    @media @mobile {
+        padding-top: 10rem;
+        padding-bottom: 12rem;
+    }
+}
+.clients__title {
+    font-size: 5rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: @light-green;
+    font-family: 'MullerLight';
+    font-weight: 400;
+    margin-bottom: 3.5rem;
+
+    & span {
+        font-family: 'MullerExtraBoldItalic';
+    }
+    
+    @media @mobile {
+        font-size: 4rem;
+    }
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.clients__slider {
+	padding: 0 3rem;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12.3rem;
+}
+
+/* Hide the images by default */
+.clients__slide {
+  align-items: center;
+  justify-content: center;
+  width: 27.6rem;
+  height: 27.6rem;
+  border-radius: 50%;
+  border: 2px solid #C4C4C4;
+  
+  @media @tablet {
+		width: 22rem;
+		height: 22rem;
+  }
+  @media @mobile {
+		width: 19rem;
+		height: 19rem;
+  }
+  @media @mobile-sm {
+    margin: 0 auto;
+  }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}

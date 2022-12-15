@@ -1,0 +1,55 @@
+// main: ../../style.less
+
+.projects__title {
+    padding-top: 12.6rem;
+    font-size: 5rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: @text;
+    font-family: 'MullerLight';
+    font-weight: 400;
+    max-width: 55rem;
+    margin-bottom: 5rem;
+
+    & span {
+        font-family: 'MullerExtraBoldItalic';
+        font-weight: 800;
+    }
+
+    @media @mobile-sm {
+        font-size: 4rem;
+    }
+}
+.projects__inner {
+    padding-bottom: 14.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.projects__first {
+    max-width: 48%;
+    width: 100%;
+
+    @media @notebook {
+        margin-bottom: 5rem;
+    }
+    @media @tablet {
+        max-width: 100%;
+    }
+}
+.projects__second {
+    max-width: 48%;
+    width: 100%;
+    margin-top: -10rem;
+    margin-bottom: 11.5rem;
+
+    @media @notebook {
+        margin-top: 0
+    }
+    @media @tablet {
+        max-width: 100%;
+    }
+    @media @mobile-sm {
+        margin-bottom: 10rem;
+    }
+}
