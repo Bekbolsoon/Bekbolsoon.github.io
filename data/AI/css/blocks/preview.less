@@ -1,0 +1,206 @@
+// main: ../style.less
+
+.preview {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) -41.9%, rgba(255, 255, 255, 0.04) 260.24%);
+  overflow: hidden;
+}
+.preview__inner {
+  padding-top: 16rem;
+  padding-bottom: 9rem;
+  display: flex;
+  justify-content: space-between;
+
+  @media @tablet {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+  @media @tablet-sm {
+    flex-wrap: wrap;
+  }
+}
+.preview__content {
+  @media @tablet {
+    width: 100%;
+    text-align: center;
+  }
+}
+.preview__suptitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: #3A68B8;
+  margin-bottom: 1rem;
+}
+.preview__title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 5.5rem;
+  line-height: 1.3;
+  color: #FFFFFF;
+  margin-bottom: 4rem;
+  overflow: hidden;
+
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: transform .8s ease 0s, opacity .8s ease 0s;
+}
+.preview__title._active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform .8s ease 0s, opacity .8s ease 0s;
+}
+.preview__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+  opacity: 0.7;
+  margin-bottom: 5rem;
+  max-width: 55.8rem;
+  
+  transform: translate(-100%, 0);
+  opacity: 0;
+
+  @media @tablet {
+    max-width: none;
+  }
+}
+.preview__text._active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform .8s ease .3s, opacity .8s ease .3s;
+}
+.preview__btns {
+  display: flex;
+  align-items: center;
+
+  transform: translate(-100%, 0);
+  opacity: 0;
+
+  @media @tablet {
+    justify-content: center;
+  }
+  @media @mobile {
+    margin-bottom: 3rem;
+  }
+  @media @mobile-sm {
+    flex-direction: column;
+  }
+}
+.preview__btns._active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform .8s ease .6s, opacity .8s ease .6s;
+}
+.preview__btn {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.35;
+  color: #FFFFFF;
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  background: #3A68B8;
+  display: inline-block;
+  border-radius: 5px;
+	background-color: #3A68B8;
+	box-shadow: none;
+	position: relative;
+	transition: color 0.5s, background-color 1s;
+
+  &:hover {
+		background-color: transparent;
+    color: #3A68B8;
+		transition: color 0.5s, background-color 1s;
+  }
+
+	&::after {
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		background-color: transparent;
+    border-color: transparent;
+    transform: scale(0.1);
+    opacity: 0;
+    z-index: -1;
+    transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+	}
+
+	&:hover::after {
+    opacity: 1;
+    transform: scale(1);
+		border-radius: 5px;
+    background-color: #fff;
+    transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+	}
+
+  &_download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+
+    & svg {
+      margin-right: 1rem;
+      fill: #fff;
+      transition: all 0.3s linear;
+    }
+
+    &:hover svg path{
+      fill: #3A68B8;
+      transition: all 0.3s linear;
+    }
+  }
+
+  @media @mobile {
+    align-self: stretch;
+  }
+	@media @mobile-sm {
+		width: 60%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin: 0 auto;
+    }
+	}
+}
+.preview__image {
+  margin-top: -5.1rem;
+  margin-right: -20.4rem;
+
+	transform: translate(100%, 0);
+	opacity: 0;
+	transition: transform 0.8s ease 0s, opacity 0.8s ease 0s;
+
+  @media @pc-md {
+    max-width: 100%;
+    margin-right: 0;
+
+    & img {
+      width: 100%;
+    }
+  }
+  
+  @media @tablet {
+    margin: 0 auto;
+  }
+  @media @tablet-sm {
+    text-align: center;
+    & img {
+      width: 75%;
+    }
+  }
+}
+.preview__image._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: transform 0.8s ease 0s, opacity 0.8s ease 0s;
+}

@@ -1,0 +1,42 @@
+// compress: false
+
+@import "vars.less";
+
+html{
+    font-size: 10px;
+
+    @media @mobile {
+        font-size: 8px;
+    }
+}
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    background: #020A18;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+/* Blocks */
+@import "blocks/container.less";
+@import "blocks/header.less";
+@import "blocks/nav.less";
+@import "blocks/preview.less";
+@import "blocks/list-logo.less";
+@import "blocks/data-science.less";
+@import "blocks/slider.less";
+@import "blocks/awards.less";
+@import "blocks/review.less";
+@import "blocks/footer.less";
