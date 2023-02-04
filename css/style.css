@@ -1111,6 +1111,42 @@ p {
 .hire-me__btn {
   text-align: right;
 }
+.form__group {
+  margin-bottom: 1.8rem;
+}
+.form__label {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  color: #2b2a2c;
+  font-weight: 700;
+}
+.form__input,
+.form__textarea {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 1.8rem;
+  border: 1px solid rgba(112, 112, 112, 0.3);
+  border-radius: 1.8rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #2b2a2c;
+}
+.form__input:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: #36abc7;
+}
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: #2b2a2c;
+}
+.form__textarea {
+  height: 200px;
+  resize: none;
+}
 .project {
   display: flex;
 }
@@ -1200,9 +1236,12 @@ p {
   font-weight: 600;
   font-size: 1rem;
 }
+.resume__content {
+  text-align: center;
+}
 .timeline {
   display: flex;
-  margin: 4.2rem auto;
+  margin: 0 auto;
   width: 100%;
   max-width: 768px;
   position: relative;
@@ -1226,6 +1265,7 @@ p {
   padding-right: 3.2rem;
 }
 .timeline__col--rigth {
+  text-align: left;
   padding-left: 3.2rem;
 }
 .timeline__title {
@@ -1272,6 +1312,7 @@ p {
 .progress-bar__item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 0.3rem;
 }
 .progress-bar__title {
@@ -1290,42 +1331,6 @@ p {
   height: 100%;
   background-color: #6a696b;
   transition: width 0.2s linear;
-}
-.form__group {
-  margin-bottom: 1.8rem;
-}
-.form__label {
-  display: inline-block;
-  margin-bottom: 0.6rem;
-  font-size: 0.8rem;
-  color: #2b2a2c;
-  font-weight: 700;
-}
-.form__input,
-.form__textarea {
-  display: block;
-  width: 100%;
-  padding: 1.3rem 1.8rem;
-  border: 1px solid rgba(112, 112, 112, 0.3);
-  border-radius: 1.8rem;
-  font-family: inherit;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  font-weight: 300;
-  color: #2b2a2c;
-}
-.form__input:focus,
-.form__textarea:focus {
-  outline: none;
-  border-color: #36abc7;
-}
-.form__input::placeholder,
-.form__textarea::placeholder {
-  color: #2b2a2c;
-}
-.form__textarea {
-  height: 200px;
-  resize: none;
 }
 /* Service styles */
 ._anim-show {
