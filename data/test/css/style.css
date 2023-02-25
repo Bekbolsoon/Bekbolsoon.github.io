@@ -590,7 +590,7 @@ h6 {
   position: absolute;
   top: 50%;
   left: 0;
-  background-image: url(../../img/first-main/btn-blick.svg);
+  background-image: url(../img/first-main/btn-blick.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -727,7 +727,7 @@ h6 {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  background: url(../../img/modal/modal-bg.png) no-repeat;
+  background: url(../img/modal/modal-bg.png) no-repeat;
   transform: rotateX(90deg);
   transition: transform 0.2s linear;
   border-radius: 1.30208333vw;
