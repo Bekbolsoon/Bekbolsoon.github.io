@@ -1,0 +1,64 @@
+// main: ../style.less
+
+.scroll-down {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 7.2917vw;
+  top: 8.8020833vw;
+  left: 0;
+
+  @media @mobile {
+    display: none;
+  }
+}
+.scroll-down__text {
+  transform: rotate(-90deg);
+  margin-bottom: 29.375vw;
+  font-size: .829166vw;
+  font-family: 'Porsche';
+  color: grey;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: .0520833vw;
+    height: 26.04166vw;
+    background-color: grey;
+    position: absolute;
+    transform: rotate(90deg);
+    top: -11.5vw;
+    left: -13.5vw;
+  }
+}
+.moving-mouse-holder {
+  margin: auto;
+}
+
+.moving-mouse-holder .mouse {
+  width: 1.04166vw;
+  height: 1.8625vw;
+  position: relative;
+  right: 0;
+  border-radius: .9375vw;
+  border: .0520833vw solid gray;
+}
+.moving-mouse-holder .mouse-button {
+  background-color: grey;
+  width: .20833vw;
+  height: .520833vw;
+  border-radius: .104166vw;
+  position: absolute;
+  top: .2604166vw;
+  left: 50%;
+  transform: translateX(-25%);
+  margin: 0 0 0 -.0520833vw;
+  animation: mouse-scroll 1s infinite alternate;
+}
+
+@keyframes mouse-scroll {
+  to {
+    transform: translate(-25%, .2604166vw) scale(1, 0.5);
+    background-color: #FD2016;
+  }
+}
