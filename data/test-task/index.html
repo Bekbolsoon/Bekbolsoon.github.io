@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Test task</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="sign-up">
+    <div class="container">
+      <div class="sign-up__wrapper">
+        <div class="sign-up__legend">
+          <h1>Sign up</h1>
+        </div>
+    
+        <div class="sign-up__content">
+          <h2 class="sign-up__title">New user?</h2>
+          <p class="sign-up__subtitle">Use the form below to create your account.</p>
+          
+          <form action="" class="sign-up__form form">
+            <div class="form__item">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+          
+            <div class="form__item">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form__item">
+              <label for="nationality">Nationality</label>
+              <input type="text" id="nationality" name="nationality" required>
+            </div>
+
+            <div class="form__item">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form__item">
+              <label for="date">Date of Birth</label>
+              <div class="form__date-wrapper">
+                <div class="form__date-item">
+                  <select name="day" id="day">
+                    <option value="21">21</option>
+                  </select>
+                </div>
+                <div class="form__date-item">
+                  <select name="month" id="month">
+                    <option value="December">December</option>
+                  </select>
+                </div>
+                <div class="form__date-item">
+                  <select name="year" id="year">
+                    <option value="1995">1995</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__item">
+              <label for="gender">Gender</label>
+              <div class="form__gender-wrapper">
+                <label>
+                  <input type="radio" value="male" id="male"  name="gender"/>
+                  <span>Male</span>
+                </label>
+                <label>
+                  <input type="radio" value="female"  id="female" name="gender"/>
+                  <span>Female</span>
+                </label>
+              </div>
+            </div>
+          
+            <div class="form__item">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+          
+            <div class="form__item">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+          </form>
+
+          <div class="sign-up__footer">
+            <div class="sign-up__question">Have an account? <a href="#">Login</a></div>
+            <input type="submit" value="Complete Signup"> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/input-date.js"></script>
+</body>
+</html>
