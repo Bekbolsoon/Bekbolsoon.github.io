@@ -10,7 +10,6 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.6rem 1.55rem;
-  // flex-wrap: wrap;
 
   @media @tablet {
     grid-template-columns: 1fr;
@@ -20,11 +19,6 @@ input {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-  // margin-bottom: 1.6rem;
-
-	&:nth-child(odd){
-		// margin-right: 1.55rem;
-	}
 
   &:nth-last-child(-n+2) {
     margin-bottom: 0;
@@ -50,12 +44,25 @@ input {
   line-height: 1.6rem;
   color: #111111;
 	padding: .49rem 0 0.63rem;
-  // width: 23.2rem;
   letter-spacing: -0.01rem;
 	&:focus {
 		outline: 0;
 		border-bottom-color: @purple;
 	}
+}
+
+.form__item input.invalid {
+  color: #FF2222;
+	border-bottom: .2rem solid #FF2828;
+}
+
+.form__password-invalid {
+  display: none;
+  color: #FF2222;
+}
+
+& .form__password-invalid.invalid {
+  display: block;
 }
 
 .form__date-wrapper {
@@ -138,7 +145,7 @@ input {
   display: flex;
   align-items: center;
   padding: 0.53rem 0 0.6rem;
-  border-radius: 99em; // or something higher...
+  border-radius: 99em;
   transition: 0.25s ease;
   font-size: 1.4rem;
   line-height: 1.6rem;
@@ -156,5 +163,9 @@ input {
     margin-right: 0.6rem;
     transition: 0.25s ease;
     border: 0.07rem solid @purple;
+  }
+
+  &.invalid {
+    color: #FF2222;
   }
 }

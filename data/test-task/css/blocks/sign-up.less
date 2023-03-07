@@ -25,6 +25,7 @@
   max-width: 13.72rem;
   width: 100%;
   position: relative;
+  z-index: 1;
 
   @media @tablet-md {
     max-width: 20%;
@@ -60,6 +61,7 @@
 .sign-up__content {
   padding: 3.9rem 2.2rem 3.3rem 2.1rem;
   width: 100%;
+  position: relative;
 }
 .sign-up__title {
   font-size: 2.2rem;
@@ -67,16 +69,26 @@
   letter-spacing: -0.046rem;
   font-weight: 500;
   color: #111111;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .sign-up__subtitle {
   font-size: 1.4rem;
   line-height: 1.641rem;
   color: #111111;
   letter-spacing: -0.03rem;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .sign-up__form {
   margin-top: 2rem;
   margin-bottom: 9.8rem;
+  z-index: 1;
+  position: relative;
   
   @media @tablet-sm {
     margin-bottom: 5rem;
@@ -86,6 +98,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
+  position: relative;
 
   @media @tablet-sm {
     flex-direction: column-reverse;
@@ -98,9 +112,15 @@
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: #FFFFFF;
-  background: #5A61ED;
+  background: @purple;
   border: 0.5px solid #FFFFFF;
   padding: .7rem 2.6rem .7rem 2.5rem;
+
+  &:hover {
+    background: 
+    rgba(90, 97, 237, .9);
+    cursor: pointer;
+  }
 }
 .sign-up__question {
   font-size: 1.3rem;
@@ -116,4 +136,31 @@
   @media @tablet-sm {
     margin-top: 1rem;
   }
+}
+
+#sign-up__svg-man {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  @media @mobile {
+    width: 280px;
+  }
+}
+
+.sign-up__registered {
+  padding: 3.9rem 2.2rem 3.3rem 2.1rem;
+  width: 100%;
+  position: relative;
+}
+
+.sign-up__registered h2 {
+  margin-top: 17.8rem;
+  margin-left: 4.3rem;
+  margin-bottom: 1.1rem;
+}
+.sign-up__registered p {
+  margin-left: 4.3rem;
+  margin-bottom: 15.2rem;
 }

@@ -52,6 +52,7 @@ p {
   max-width: 13.72rem;
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 @media (max-width: 650px) {
   .sign-up__legend {
@@ -89,6 +90,7 @@ p {
 .sign-up__content {
   padding: 3.9rem 2.2rem 3.3rem 2.1rem;
   width: 100%;
+  position: relative;
 }
 .sign-up__title {
   font-size: 2.2rem;
@@ -96,16 +98,24 @@ p {
   letter-spacing: -0.046rem;
   font-weight: 500;
   color: #111111;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .sign-up__subtitle {
   font-size: 1.4rem;
   line-height: 1.641rem;
   color: #111111;
   letter-spacing: -0.03rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .sign-up__form {
   margin-top: 2rem;
   margin-bottom: 9.8rem;
+  z-index: 1;
+  position: relative;
 }
 @media (max-width: 530px) {
   .sign-up__form {
@@ -116,6 +126,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
+  position: relative;
 }
 @media (max-width: 530px) {
   .sign-up__footer {
@@ -133,6 +145,10 @@ p {
   border: 0.5px solid #FFFFFF;
   padding: 0.7rem 2.6rem 0.7rem 2.5rem;
 }
+.sign-up__footer input:hover {
+  background: rgba(90, 97, 237, 0.9);
+  cursor: pointer;
+}
 .sign-up__question {
   font-size: 1.3rem;
   line-height: 1.5rem;
@@ -147,6 +163,31 @@ p {
   .sign-up__question {
     margin-top: 1rem;
   }
+}
+#sign-up__svg-man {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+@media (max-width: 385px) {
+  #sign-up__svg-man {
+    width: 280px;
+  }
+}
+.sign-up__registered {
+  padding: 3.9rem 2.2rem 3.3rem 2.1rem;
+  width: 100%;
+  position: relative;
+}
+.sign-up__registered h2 {
+  margin-top: 17.8rem;
+  margin-left: 4.3rem;
+  margin-bottom: 1.1rem;
+}
+.sign-up__registered p {
+  margin-left: 4.3rem;
+  margin-bottom: 15.2rem;
 }
 input {
   appearance: none;
@@ -193,6 +234,17 @@ input {
 .form__item input:focus {
   outline: 0;
   border-bottom-color: #5A61ED;
+}
+.form__item input.invalid {
+  color: #FF2222;
+  border-bottom: 0.2rem solid #FF2828;
+}
+.form__password-invalid {
+  display: none;
+  color: #FF2222;
+}
+.form__password-invalid.invalid {
+  display: block;
 }
 .form__date-wrapper {
   display: flex;
@@ -282,4 +334,25 @@ input {
   margin-right: 0.6rem;
   transition: 0.25s ease;
   border: 0.07rem solid #5A61ED;
+}
+.form__gender-wrapper span.invalid {
+  color: #FF2222;
+}
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 2;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
