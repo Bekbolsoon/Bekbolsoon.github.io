@@ -1,0 +1,166 @@
+// main: ../style.less
+
+.sign-up {
+  padding: 6rem 6.7rem 5.9rem 6.8rem;
+
+  @media @tablet-md {
+    padding: 3rem 3.5rem;
+  } 
+  @media @tablet-sm {
+    padding: 2rem 1.5rem;
+  } 
+}
+.sign-up__wrapper {
+  background: #FFF;
+  display: flex;
+
+  @media @mobile {
+    flex-direction: column;
+  }
+}
+.sign-up__legend {
+  display: flex;
+  flex-direction: column;
+  background: @purple;
+  max-width: 13.72rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @media @tablet-md {
+    max-width: 20%;
+  }
+
+  @media @mobile {
+    max-width: none;
+    width: 100%;
+    padding-left: 4rem;
+  }
+
+  & h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 4.9rem;
+    line-height: 6.3rem;
+    letter-spacing: 0.05rem;
+    color: #FFF;
+    transform: rotate(-90deg);
+    position: absolute;
+    min-width: 16.2rem;
+    bottom: 7.2rem;
+    right: -4.4rem;
+
+    @media @mobile {
+      position: relative;
+      transform: rotate(0deg);
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+.sign-up__content {
+  padding: 3.9rem 2.2rem 3.3rem 2.1rem;
+  width: 100%;
+  position: relative;
+}
+.sign-up__title {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  letter-spacing: -0.046rem;
+  font-weight: 500;
+  color: #111111;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sign-up__subtitle {
+  font-size: 1.4rem;
+  line-height: 1.641rem;
+  color: #111111;
+  letter-spacing: -0.03rem;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sign-up__form {
+  margin-top: 2rem;
+  margin-bottom: 9.8rem;
+  z-index: 1;
+  position: relative;
+  
+  @media @tablet-sm {
+    margin-bottom: 5rem;
+  }
+}
+.sign-up__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+
+  @media @tablet-sm {
+    flex-direction: column-reverse;
+  }
+}
+.sign-up__footer input {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #FFFFFF;
+  background: @purple;
+  border: 0.5px solid #FFFFFF;
+  padding: .7rem 2.6rem .7rem 2.5rem;
+
+  &:hover {
+    background: 
+    rgba(90, 97, 237, .9);
+    cursor: pointer;
+  }
+}
+.sign-up__question {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.046rem;
+  color: #000000;
+
+  & a {
+    color: @purple;
+    font-weight: 500;
+  }
+  
+  @media @tablet-sm {
+    margin-top: 1rem;
+  }
+}
+
+#sign-up__svg-man {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  @media @mobile {
+    width: 280px;
+  }
+}
+
+.sign-up__registered {
+  padding: 3.9rem 2.2rem 3.3rem 2.1rem;
+  width: 100%;
+  position: relative;
+}
+
+.sign-up__registered h2 {
+  margin-top: 17.8rem;
+  margin-left: 4.3rem;
+  margin-bottom: 1.1rem;
+}
+.sign-up__registered p {
+  margin-left: 4.3rem;
+  margin-bottom: 15.2rem;
+}
