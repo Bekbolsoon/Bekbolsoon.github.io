@@ -128,21 +128,19 @@ $(function () {
 
 
   /*===== Settings of slider =====*/
-  const worksSlider = $('[data-slider="slick"]');
-
-  worksSlider.slick({
-    dots: true,
-    infinite: true,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    pauseOnFocus: false,
-    pauseOnHover: true,
-    pauseOnDotsHover: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    cssEase: 'linaer',
-    arrows: false
+  const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 
 

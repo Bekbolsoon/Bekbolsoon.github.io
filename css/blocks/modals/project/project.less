@@ -1,16 +1,7 @@
 // main: ../../../style.less
 
-.project {
-	display: flex;
-
-	@media @tablet-md {
-		flex-direction: column-reverse;
-		max-height: none;
-	}
-}
-
 .project__preview {
-	width: 60%;
+	width: 100%;
 	position: relative;
 	overflow: hidden;
 
@@ -29,17 +20,23 @@
 }
 
 .project__content {
-	width: 40%;
-	padding: 3rem 1.5rem 1rem 1rem;
+	padding: 3rem 5rem;
 	position: relative;
 
 	@media @tablet-md {
 		width: 100%;
 	}
+	@media @mobile-md {
+		padding: 3rem 2rem;
+	}
+	@media @mobile {
+		padding: 3rem 1rem;;
+	}
 }
 
 .project__header {
 	margin-bottom: 2.2rem;
+	text-align: center;
 }
 
 .project__title {
@@ -48,6 +45,13 @@
 	color: @black;
 	font-weight: 700;
 	text-transform: uppercase;
+	
+	@media @mobile-md {
+		font-size: 1.5rem;
+	}
+	@media @mobile {
+		font-size: 1.2rem;
+	}
 }
 
 .project__info {
@@ -57,6 +61,13 @@
 
 	span {
 		margin: 0 1rem;
+	}
+
+	@media @mobile-md {
+		font-size: 1rem;
+	}
+	@media @mobile {
+		font-size: .9rem;
 	}
 }
 
@@ -69,12 +80,20 @@
 	font-size: 1.06rem;
 	color: @black;
 	font-weight: 700;
+	
+	@media @mobile-md {
+		font-size: 0.8rem;
+	}
 }
 
 .project__client-company {
 	font-size: 0.94rem;
 	color: @gray;
 	font-style: italic;
+	
+	@media @mobile-md {
+		font-size: 0.8rem;
+	}
 }
 
 .project__text {
@@ -83,12 +102,16 @@
 	color: @gray;
 	line-height: 2;
 	font-weight: 300;
+
+	@media @mobile {
+		line-height: 1.75;
+	}
 }
 
 .project__link {
 	text-align: center;
 	font-size: 1rem;
-	font-style: italic;
+	text-transform: uppercase;
 	margin: 0;
 	margin-bottom: 0.2rem;
 
@@ -100,5 +123,32 @@
 		color: #000;
 		font-weight: 600;
 		font-size: 1rem;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	@media @mobile-md {
+		font-size: 0.8rem;
+	}
+}
+
+.swiper-button-next, .swiper-button-prev {
+	@media @mobile-md {
+		width: 1rem;
+		height: 1.7rem;
+	}
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+	@media @mobile-md {
+		font-size: 15px;
+	}
+}
+.swiper-pagination-bullet {
+	@media @mobile-md {
+		width: 5px;
+		height: 5px;
 	}
 }

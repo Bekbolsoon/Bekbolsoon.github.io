@@ -370,7 +370,7 @@ p {
   position: relative;
   padding-top: 6.6rem;
   padding-bottom: 8rem;
-  background: url("../../images/intro/bg-intro.png") right bottom no-repeat;
+  background: url("../../images/intro/bg-intro.webp") right bottom no-repeat;
 }
 @media (max-width: 991px) {
   .intro__inner {
@@ -408,13 +408,14 @@ p {
 .intro__subtitle._active {
   transform: translate(0px, 0px);
   opacity: 1;
+  transition: all 0.8s ease 0s;
 }
 .intro__title {
   font-size: 3rem;
   color: #2b2a2c;
   font-weight: 700;
   margin-bottom: 5px;
-  transform: translate(0px, 10%);
+  transform: translate(0px, 120%);
   opacity: 0;
   transition: all 0.8s ease 0s;
 }
@@ -426,7 +427,7 @@ p {
 .intro__title._active {
   transform: translate(0px, 0px);
   opacity: 1;
-  transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0.3s;
 }
 .intro__text {
   font-size: 1.2rem;
@@ -439,7 +440,7 @@ p {
 .intro__text._active {
   transform: translate(0px, 0px);
   opacity: 1;
-  transition: all 0.8s ease 0.8s;
+  transition: all 0.8s ease 0.6s;
 }
 @media (max-width: 660px) {
   .intro__btns {
@@ -514,8 +515,8 @@ p {
 .social__telegram {
   background-color: #27a1e0;
 }
-.social__vk {
-  background-color: #5181B8;
+.social__whatsapp {
+  background-color: #00E778;
 }
 .works {
   margin: 2.8rem 0;
@@ -590,6 +591,7 @@ p {
 }
 .portfolio__item:hover {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .portfolio__item {
@@ -610,32 +612,40 @@ p {
   background-position: center;
 }
 .portfolio__image_new-manycam {
-  background-image: url(../../images/portfolio/manycam-beta.png);
+  background-image: url(../../images/portfolio/manycam-beta.webp);
   background-position: 0 -78px;
 }
-.portfolio__image_manycam {
-  background-image: url(../../images/portfolio/manycam.png);
-  background-position: 0 -23px;
-}
 .portfolio__image_tomsksoft {
-  background-image: url(../../images/portfolio/tomsksoft.png);
+  background-image: url(../../images/portfolio/tomsksoft.webp);
   background-position: 0 0;
 }
 .portfolio__image_print163 {
-  background-image: url(../../images/portfolio/print163.png);
+  background-image: url(../../images/portfolio/print163.webp);
   background-position: 0 -20px;
 }
 .portfolio__image_lime {
-  background-image: url(../../images/portfolio/lime.png);
+  background-image: url(../../images/portfolio/lime.webp);
   background-position: 0 0;
 }
 .portfolio__image_AI {
-  background-image: url(../../images/portfolio/AI.png);
+  background-image: url(../../images/portfolio/AI.webp);
   background-position: 0 0;
 }
 .portfolio__image_game {
-  background-image: url(../../images/portfolio/game.png);
+  background-image: url(../../images/portfolio/game.webp);
   background-position: center center;
+}
+.portfolio__image_acca {
+  background-image: url(../../images/portfolio/acca.webp);
+  background-position: 0 0;
+}
+.portfolio__image_perestilium {
+  background-image: url(../../images/portfolio/perestilium.webp);
+  background-position: 0 0;
+}
+.portfolio__image_solvt {
+  background-image: url(../../images/portfolio/solvt.webp);
+  background-position: 0 0;
 }
 .portfolio__content {
   padding: 1rem 0.8rem;
@@ -870,8 +880,8 @@ p {
 .contact__btn_telegram::after {
   background: #269fdd;
 }
-.contact__btnvk::after {
-  background: #0071f2;
+.contact__btn_whatsapp::after {
+  background: #00E778;
 }
 .contact__btn::before {
   background: #000;
@@ -1063,7 +1073,7 @@ p {
   width: 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../../images/modal/hire_me/hire_me.jpg);
+  background-image: url(../../images/modal/hire_me/hire_me.webp);
 }
 @media (max-width: 660px) {
   .hire-me__image {
@@ -1151,17 +1161,8 @@ p {
   height: 200px;
   resize: none;
 }
-.project {
-  display: flex;
-}
-@media (max-width: 880px) {
-  .project {
-    flex-direction: column-reverse;
-    max-height: none;
-  }
-}
 .project__preview {
-  width: 60%;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -1177,8 +1178,7 @@ p {
   object-fit: cover;
 }
 .project__content {
-  width: 40%;
-  padding: 3rem 1.5rem 1rem 1rem;
+  padding: 3rem 5rem;
   position: relative;
 }
 @media (max-width: 880px) {
@@ -1186,8 +1186,19 @@ p {
     width: 100%;
   }
 }
+@media (max-width: 660px) {
+  .project__content {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .project__content {
+    padding: 3rem 1rem;
+  }
+}
 .project__header {
   margin-bottom: 2.2rem;
+  text-align: center;
 }
 .project__title {
   margin-bottom: 0.2rem;
@@ -1196,6 +1207,16 @@ p {
   font-weight: 700;
   text-transform: uppercase;
 }
+@media (max-width: 660px) {
+  .project__title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .project__title {
+    font-size: 1.2rem;
+  }
+}
 .project__info {
   font-size: 1.2rem;
   color: #6a696b;
@@ -1203,6 +1224,16 @@ p {
 }
 .project__info span {
   margin: 0 1rem;
+}
+@media (max-width: 660px) {
+  .project__info {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .project__info {
+    font-size: 0.9rem;
+  }
 }
 .project__client {
   margin-bottom: 1rem;
@@ -1213,10 +1244,20 @@ p {
   color: #2b2a2c;
   font-weight: 700;
 }
+@media (max-width: 660px) {
+  .project__client-title {
+    font-size: 0.8rem;
+  }
+}
 .project__client-company {
   font-size: 0.94rem;
   color: #6a696b;
   font-style: italic;
+}
+@media (max-width: 660px) {
+  .project__client-company {
+    font-size: 0.8rem;
+  }
 }
 .project__text {
   margin-bottom: 1rem;
@@ -1225,10 +1266,15 @@ p {
   line-height: 2;
   font-weight: 300;
 }
+@media (max-width: 767px) {
+  .project__text {
+    line-height: 1.75;
+  }
+}
 .project__link {
   text-align: center;
   font-size: 1rem;
-  font-style: italic;
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 0.2rem;
 }
@@ -1239,6 +1285,34 @@ p {
   color: #000;
   font-weight: 600;
   font-size: 1rem;
+  text-decoration: none;
+}
+.project__link a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 660px) {
+  .project__link {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 660px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 1rem;
+    height: 1.7rem;
+  }
+}
+@media (max-width: 660px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 15px;
+  }
+}
+@media (max-width: 660px) {
+  .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+  }
 }
 .resume__content {
   text-align: center;
